@@ -18,12 +18,14 @@ class MeetingTimeWidget extends StatefulWidgetBase {
 class _MeetingTimeWidgetState extends State<MeetingTimeWidget> {
 
   String selectedDateTime;
-  DateTime currentTime, selectedTime;
+  DateTime currentTime, selectedTime, maxDateTime, minDateTime;
 
   @override
   void initState() {
     currentTime = DateTime.now();
     if(widget.setValue != null) selectedDateTime = widget.setValue;
+    minDateTime = DateTime.fromMicrosecondsSinceEpoch(currentTime.microsecondsSinceEpoch);
+    maxDateTime = DateTime(currentTime.year, currentTime.month, currentTime.day+30, currentTime.hour, currentTime.minute, currentTime.second);
     super.initState();
   }
 
@@ -103,14 +105,16 @@ class _MeetingTimeWidgetState extends State<MeetingTimeWidget> {
   }
 
   datePicker(){
+
     DatePicker.showDateTimePicker(context,
         showTitleActions: true,
-        minTime: DateTime(currentTime.year, currentTime.month, currentTime.day, currentTime.hour, currentTime.minute + 15, currentTime.second),
-        maxTime: DateTime(currentTime.year, currentTime.month, currentTime.day+7, currentTime.hour, currentTime.minute, currentTime.second), onChanged: (date) {
+        minTime: minDateTime,
+        maxTime: maxDateTime, onChanged: (date) {
         }, onConfirm: (date) {
           setState(() {
             selectedDateTime = CommonUtil.instance.convertTo_dd_MMM_yyyy_hhmm(date);
           });
+          selectedTime = date;
           widget.onSelectDateTime(date);
         }, currentTime: selectedTime ?? currentTime, locale: LocaleType.en);
   }

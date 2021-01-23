@@ -66,7 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_title" : MessageLookupByLibrary.simpleMessage("Settings"),
     "start_time" : MessageLookupByLibrary.simpleMessage("Start Time"),
     "start_time_more_closing_time" : MessageLookupByLibrary.simpleMessage("Start time should be less than closing time"),
-    "timezone" : MessageLookupByLibrary.simpleMessage("Timezone"),
+    "timezone" : MessageLookupByLibrary.simpleMessage("TimeZone"),
     "title" : MessageLookupByLibrary.simpleMessage("Title"),
     "title_empty_error" : MessageLookupByLibrary.simpleMessage("Title cannot be empty"),
     "title_invalid_error" : MessageLookupByLibrary.simpleMessage("Title length should be 2 characters"),

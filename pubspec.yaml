@@ -55,7 +55,10 @@ dependencies:
   flutter_colorpicker: ^0.3.5
   # To show toast messages
   toast: ^0.1.5
+  # Get TimeZones
   timezone: ^0.5.4
+  # To show notifications
+  flutter_local_notifications: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +79,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/
-    - assets/2020d.tzf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,7 +1,53 @@
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:meeting_planner_app/src/ui/widgets/common/stateful_widget_base.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CommonWidget{
+
+  static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+
+  static initializePlatformSpecifics() {
+    flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+    var initializationSettingsAndroid =
+    AndroidInitializationSettings('@mipmap/ic_notification');
+    var initializationSettingsIOS = IOSInitializationSettings(
+      requestAlertPermission: true,
+      requestBadgePermission: true,
+      requestSoundPermission: false,
+      onDidReceiveLocalNotification: (id, title, body, payload) async {
+        // your call back to the UI
+      },
+    );
+    var initSettings = new InitializationSettings(android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
+    flutterLocalNotificationsPlugin.initialize(initSettings);
+  }
+
+  Future<void> scheduleNotification(int minutes, String title, String description) async {
+    var scheduleNotificationDateTime = DateTime.now().add(Duration(seconds: 5));
+    var androidChannelSpecifics = AndroidNotificationDetails(
+      'CHANNEL_ID 1',
+      'CHANNEL_NAME 1',
+      "CHANNEL_DESCRIPTION 1",
+      importance: Importance.max,
+      priority: Priority.high,
+      styleInformation: BigTextStyleInformation(''),
+    );
+    var iosChannelSpecifics = IOSNotificationDetails(
+      sound: 'my_sound.aiff',
+    );
+    var platformChannelSpecifics = NotificationDetails(
+      android: androidChannelSpecifics,
+      iOS: iosChannelSpecifics,
+    );
+    await flutterLocalNotificationsPlugin.schedule(
+      0,
+      title,
+      description,
+      scheduleNotificationDateTime,
+      platformChannelSpecifics,
+      payload: 'Test Payload',
+    );
+  }
 
   AppBar getAppBar(BuildContext context, String title,
       {backActionRequired = true,

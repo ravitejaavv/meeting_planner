@@ -16,6 +16,8 @@ import 'package:meeting_planner_app/src/ui/widgets/common/stateful_widget_base.d
 import 'package:meeting_planner_app/src/ui/widgets/home_screen/action_widgets.dart';
 import 'package:meeting_planner_app/src/ui/widgets/home_screen/meetings_list_widgets.dart';
 
+import '../utils/string_constants.dart';
+
 class HomeScreen extends StatelessWidget {
   static const ROUTE_NAME = "/home_screen";
 
@@ -62,6 +64,7 @@ class _HomeScreenState extends State<HomeScreenWidget> with CommonWidget {
       prefsHelper.setMeetigRoomDetails(data);
 
       DateTime currentTime = DateTime.now();
+
       DateTime officeStartTime = DateTime(currentTime.year, currentTime.month, currentTime.day, 9, 0);
       DateTime officeClosingTime = DateTime(currentTime.year, currentTime.month, currentTime.day, 17, 0);
       OfficeHours officeHours = OfficeHours();
@@ -70,6 +73,7 @@ class _HomeScreenState extends State<HomeScreenWidget> with CommonWidget {
 
       String officeHoursData = json.encode(officeHours);
       prefsHelper.setOfficeHours(officeHoursData);
+      prefsHelper.setTimeZone(StringConstants.TIME_ZONE_DEFAULT);
     }
   }
 

@@ -40,7 +40,7 @@
   "yes_title": "Yes",
   "no_title": "No",
   "office_hours": "Office Hours",
-  "timezone": "Timezone",
+  "timezone": "TimeZone",
   "start_time": "Start Time",
   "end_time": "Closing Time",
   "start_time_more_closing_time": "Start time should be less than closing time",

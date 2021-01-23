@@ -425,10 +425,10 @@ class S {
     );
   }
 
-  /// `Timezone`
+  /// `TimeZone`
   String get timezone {
     return Intl.message(
-      'Timezone',
+      'TimeZone',
       name: 'timezone',
       desc: '',
       args: [],

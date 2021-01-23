@@ -153,6 +153,10 @@ class _BookingScreenState extends State<BookingScreen> with CommonWidget {
 
     widget.arguments.homeBloc.insertData(bookingItem);
     widget.arguments.onPlanMeeting();
+    if(isReminder) {
+      scheduleNotification(
+          selectedReminderDuration, bookingItem.title, bookingItem.description);
+    }
     Navigator.of(context).pop();
   }
 }
