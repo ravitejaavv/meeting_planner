@@ -26,4 +26,5 @@ should be popped up during reminder. Settings Screen
 - Notification On/Off
 
 ![Alt text](/screenshots/1.jpg?raw=true "")
+<img src="/screenshots/2.jpg" width="100" height="200"/>
 
