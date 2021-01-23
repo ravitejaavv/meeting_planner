@@ -28,7 +28,8 @@ A Flutter application to build a meeting planner to manage the meeting room duri
 
 ## Known Issues/ Pending scenarios:
 - Meeting conflicts
-- Date, Time duration selections based on timezone
+- Date, Time duration based on timezone
+- Conflicts betwern Reminder timings and meeting timings
 - Cancel Notifications
 
 

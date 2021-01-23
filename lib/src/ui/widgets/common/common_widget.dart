@@ -23,7 +23,7 @@ class CommonWidget{
   }
 
   Future<void> scheduleNotification(int minutes, String title, String description) async {
-    var scheduleNotificationDateTime = DateTime.now().add(Duration(seconds: 5));
+    var scheduleNotificationDateTime = DateTime.now().add(Duration(minutes: minutes));
     var androidChannelSpecifics = AndroidNotificationDetails(
       'CHANNEL_ID 1',
       'CHANNEL_NAME 1',
