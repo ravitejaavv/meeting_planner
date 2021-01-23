@@ -25,6 +25,9 @@ should be popped up during reminder. Settings Screen
 - Convert Timezone
 - Notification On/Off
 
+<!DOCTYPE html>
+<html>
+<head>
 <style>
 * {
   box-sizing: border-box;
@@ -43,6 +46,8 @@ should be popped up during reminder. Settings Screen
   display: table;
 }
 </style>
+</head>
+<body>
 
 <div class="row">
   <div class="column">
@@ -86,5 +91,6 @@ should be popped up during reminder. Settings Screen
       <img src="/screenshots/12.jpg" alt="Mountains" style="width:40%">
     </div>
 </div>
-
+</body>
+</html>
 
