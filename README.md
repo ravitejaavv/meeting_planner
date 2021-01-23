@@ -25,16 +25,60 @@ should be popped up during reminder. Settings Screen
 - Convert Timezone
 - Notification On/Off
 
-<img src="/screenshots/1.jpg" width="200" height="500"/>
-<img src="/screenshots/2.jpg" width="200" height="500"/>
-<img src="/screenshots/3.jpg" width="200" height="500"/>
-<img src="/screenshots/4.jpg" width="200" height="500"/>
-<img src="/screenshots/5.jpg" width="200" height="500"/>
-<img src="/screenshots/6.jpg" width="200" height="500"/>
-<img src="/screenshots/7.jpg" width="200" height="500"/>
-<img src="/screenshots/8.jpg" width="200" height="500"/>
-<img src="/screenshots/9.jpg" width="200" height="500"/>
-<img src="/screenshots/10.jpg" width="200" height="500"/>
-<img src="/screenshots/11.jpg" width="200" height="500"/>
-<img src="/screenshots/12.jpg" width="200" height="500"/>
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+<div class="row">
+  <div class="column">
+    <img src="/screenshots/1.jpg" alt="Snow" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/2.jpg" alt="Forest" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/3.jpg" alt="Mountains" style="width:40%">
+  </div>
+  <div class="column">
+      <img src="/screenshots/4.jpg" alt="Mountains" style="width:40%">
+    </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="/screenshots/5.jpg" alt="Snow" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/6.jpg" alt="Forest" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/7.jpg" alt="Mountains" style="width:40%">
+  </div>
+  <div class="column">
+      <img src="/screenshots/8.jpg" alt="Mountains" style="width:40%">
+    </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="/screenshots/9.jpg" alt="Snow" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/10.jpg" alt="Forest" style="width:40%">
+  </div>
+  <div class="column">
+    <img src="/screenshots/11.jpg" alt="Mountains" style="width:40%">
+  </div>
+  <div class="column">
+      <img src="/screenshots/12.jpg" alt="Mountains" style="width:40%">
+    </div>
+</div>
+
 
