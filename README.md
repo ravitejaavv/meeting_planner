@@ -17,37 +17,18 @@ New Booking Screen
 - Meeting duration (Default: 30 mins)
 - Choose Meeting Room
 - Priority - High/Medium/Low
-- Reminder - as needed before 24hrs,15 mins,30 mins (Default - 15 mins) Notification
+- Reminder - as needed before 24hrs,15 mins,30 mins (Default - 15 mins) Notification should be popped up during reminder.
 
-should be popped up during reminder. Settings Screen
+Settings Screen
 - Update Office Hours (Default: 9am to 5pm)
 - Meeting rooms colour code
 - Convert Timezone
 - Notification On/Off
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-</head>
-<body>
+Known Issues/ Pending scenarios:
+- Meeting conflicts
+- Date, Time duration selections based on timezone
+- Cancel Notifications
 
 <div class="row">
   <div class="column">
