@@ -25,6 +25,11 @@ should be popped up during reminder. Settings Screen
 - Convert Timezone
 - Notification On/Off
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
 .column {
   float: left;
   width: 33.33%;
@@ -37,6 +42,7 @@ should be popped up during reminder. Settings Screen
   clear: both;
   display: table;
 }
+</style>
 
 <div class="row">
   <div class="column">
