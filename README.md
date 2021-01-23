@@ -5,13 +5,14 @@ Daily Offline Meeting Planner
 ## Getting Started
 
 A Flutter application to build a meeting planner to manage the meeting room during office hours.
-Main Screen
+
+#Main Screen
 - Show meeting room bookings for selected date (Default: current date)
 - User should able to switch the date and view the bookings
 - User should be able to go to detail screen and cancel the booking if required
 - Option to Add a new booking
 
-New Booking Screen
+#New Booking Screen
 - Title and Description.
 - Meeting Time/Date
 - Meeting duration (Default: 30 mins)
@@ -19,16 +20,17 @@ New Booking Screen
 - Priority - High/Medium/Low
 - Reminder - as needed before 24hrs,15 mins,30 mins (Default - 15 mins) Notification should be popped up during reminder.
 
-Settings Screen
+#Settings Screen
 - Update Office Hours (Default: 9am to 5pm)
 - Meeting rooms colour code
 - Convert Timezone
 - Notification On/Off
 
-Known Issues/ Pending scenarios:
+#Known Issues/ Pending scenarios:
 - Meeting conflicts
 - Date, Time duration selections based on timezone
 - Cancel Notifications
+
 
 <div class="row">
   <div class="column">
